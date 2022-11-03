@@ -19,7 +19,6 @@ export default {
     },
     watch: {
         'content.config': {
-            immediate: true,
             deep: true,
             handler() {
                 if (this.chartInstance) this.chartInstance.destroy();
@@ -27,6 +26,9 @@ export default {
                 this.chartInstance.update();
             },
         },
+    },
+    mounted() {
+        this.initChart();
     },
     beforeUnmount() {
         this.chartInstance.destroy();
