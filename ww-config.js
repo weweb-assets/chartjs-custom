@@ -7,7 +7,7 @@ export default {
         config: {
             label: 'Config',
             type: 'Info',
-            options: { text: 'Chart Datasets' },
+            options: { text: 'Chart config' },
             responsive: true,
             section: 'settings',
             bindable: 'list',
