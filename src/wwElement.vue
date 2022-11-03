@@ -1,6 +1,6 @@
 <template>
-    <div class="chart-container" style="position: relative">
-        <canvas ref="chartjsLine"></canvas>
+    <div style="position: relative">
+        <canvas ref="chartjsCustom"></canvas>
     </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
         };
     },
     watch: {
-        config: {
+        'content.config': {
             immediate: true,
             deep: true,
             handler() {
@@ -28,15 +28,12 @@ export default {
             },
         },
     },
-    mounted() {
-        this.initChart();
-    },
     beforeUnmount() {
         this.chartInstance.destroy();
     },
     methods: {
         initChart() {
-            const element = this.$refs.chartjsLine;
+            const element = this.$refs.chartjsCustom;
             this.chartInstance = new Chart(element, this.content.config);
         },
     },
