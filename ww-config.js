@@ -12,7 +12,6 @@ export default {
             section: 'settings',
             bindable: 'list',
             defaultValue: {},
-            hidden: content => content.dataType !== 'advanced',
         },
     },
 };
