@@ -45,10 +45,10 @@ export default {
                             },
                         });
                     },
-                }
-            }
-        }
-    }
+                },
+            };
+        },
+    },
     watch: {
         'content.config': {
             deep: true,
