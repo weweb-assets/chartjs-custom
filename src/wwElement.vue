@@ -28,7 +28,7 @@ export default {
                         const position = getRelativePosition(e, this.chartInstance);
                         const points = this.chartInstance.getElementsAtEventForMode(
                             e,
-                            'nearest',
+                            this.config.options.interaction || 'nearest',
                             { intersect: true },
                             true
                         );
