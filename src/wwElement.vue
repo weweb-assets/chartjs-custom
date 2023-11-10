@@ -44,7 +44,7 @@ export default {
                                             point.index
                                         ] === 'object'
                                             ? this.chartInstance.data.datasets[point.datasetIndex].data[point.index][
-                                                  this.content.axis === 'x' ? 'y' : 'x'
+                                                  'y'
                                               ]
                                             : this.chartInstance.data.datasets[point.datasetIndex].data[point.index],
                                     ...point,
